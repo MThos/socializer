@@ -1,0 +1,137 @@
+/* Tag List - Alphabetical */
+html, body {
+    background: white;
+    color: #faf6ee;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 200;
+    min-width: 100%;
+}
+
+a {
+    color: #28a745;
+    font-weight: 600;
+    outline: none !important;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    color: #0a0a0a;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+input {
+    border: 2px solid black !important;
+    border-radius: 1px !important;
+    text-align: center;
+}
+
+li {
+    margin: 10px 0 0 0;
+}
+
+li > a {
+    color: #28a745;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+li > a:hover, a:focus, a:active {
+    color: #faf6ee;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: square;
+}
+
+/* Class List - Alphabetical */
+.btn-success {
+    background: mediumseagreen;
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.dark-line {
+    color: rgba(0, 0, 0, 0.1);
+    font-weight: 800;
+    padding: 0 10px;
+}
+
+.footer {
+    background: rgba(255, 255, 255, 0.5);
+    bottom: 0;
+    color: #0a0a0a;
+    font-weight: 400;
+    line-height: 1.8rem;
+    padding: 20px 0;
+    position: fixed;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100vw;
+}
+
+.footer > a {
+    color: mediumseagreen;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    outline: none !important;
+    text-decoration: none;
+}
+
+.footer > a:hover, a:focus, a:active {
+    color: black;
+    font-weight: 800;
+}
+.form-group {
+    margin: 15px auto;
+    width: 70%;
+    text-align: center;
+}
+
+.main-section {
+    background: #faf6ee;
+    border: 2px solid black;
+    color: #0a0a0a;
+    margin: auto;
+    position: absolute;
+    height: 560px;
+    padding: 15px;
+    width: 550px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.m-b-md {
+    margin-bottom: 20px;
+}
+
+.sign-in, .trouble {
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.sub-title {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}

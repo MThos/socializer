@@ -1,0 +1,118 @@
+/* Tag List - Alphabetical */
+html, body {
+    background-color: #faf6ee;
+    color: #0a0a0a;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+p {
+    background: #131313;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.8rem;
+    margin: 15px auto;
+    padding: 10px 20px;
+    text-align: left;
+    width: 95vw;
+}
+
+ul {
+    list-style-type: square;
+}
+
+li {
+    margin: 10px 0 0 0;
+}
+
+li > a {
+    color: #28a745;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+li > a:hover, a:focus, a:active {
+    color: #faf6ee;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Class List - Alphabetical */
+.modal-body {
+    margin: 10px 0;
+}
+
+.modal-body > p {
+    width: 95%;
+}
+
+.modal-content {
+    border: 2px solid black;
+    background: #0a0a0a;
+}
+
+.modal-header {
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+}
+
+.modal-form-label {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.modal-footer {
+    border-top: 2px solid black;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+.modal-footer > .btn {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.modal-lg {
+    max-width: 70% !important;
+}
+
+.modal-section-header {
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.modal-section-subheader {
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* ID List - Alphabetical */
+#message-text {
+    background: #131313;
+    border: 2px solid black;
+    color: #faf6ee;
+    resize: none;
+}
+
+#recipient-name {
+    background: #131313;
+    border: 2px solid black;
+    color: #faf6ee;
+}
+
+#recipient-name:hover {
+    cursor: not-allowed;
+}
