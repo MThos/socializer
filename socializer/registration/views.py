@@ -12,7 +12,7 @@ def index(request):
     year = datetime.datetime.now().year
     title = resolve(request.path).app_name.capitalize()
     get_current_language = translation.get_language()
-    return render(request, "index.html", {
+    return render(request, "registration/index.html", {
         "year": year,
         "title": "Sign up",
         "tab_title": "Sign up - Socializer",

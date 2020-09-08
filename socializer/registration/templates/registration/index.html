@@ -1,0 +1,52 @@
+{% extends "registration/base.html" %}
+
+{% block header %}
+<header>
+    <h1 class="title m-b-md">{{title}}</h1>
+    <h4 class="sub-title">{{sub_title}}</h4>
+</header>
+{% endblock %}
+
+{% block content %}
+<section class="main-content">
+    <form class="registration" action="{% url 'registration.views.signup' &}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="email" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="full-name" placeholder="full name" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="user-name" placeholder="user name" />
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="password" />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="SIGN UP" />
+        </div>
+    </form>
+</section>
+<br>
+<section class="other-options">
+    <div class="sign-in">
+    Already have an account? <a href="#">Sign In</a>.
+    </div>
+    <div class="trouble">
+        Having trouble signing up? <a href="#">Contact us</a>.
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+<footer class="footer">
+    Copyright &copy; {{year}}
+    <span class="dark-line">|</span>
+    <a href="#">Terms of Service</a>
+    <span class="dark-line">|</span>
+    <a href="#">Privacy Policy</a>
+    <span class="dark-line">|</span>
+    <a href="#">Contact</a>
+</footer>
+{% endblock %}
