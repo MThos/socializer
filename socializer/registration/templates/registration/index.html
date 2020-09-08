@@ -9,19 +9,19 @@
 
 {% block content %}
 <section class="main-content">
-    <form class="registration" action="{% url 'registration.views.signup' &}" method="post">
+    <form class="registration" action="{% url 'registration:signup' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="email" />
+            <input type="email" class="form-control" name="email" id="email" placeholder="email" />
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" id="full-name" placeholder="full name" />
+            <input type="text" class="form-control" name="full_name" id="full-name" placeholder="full name" />
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" id="user-name" placeholder="user name" />
+            <input type="text" class="form-control" name="user_name" id="user-name" placeholder="user name" />
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" id="password" placeholder="password" />
+            <input type="password" class="form-control" name="password" id="password" placeholder="password" />
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-success" value="SIGN UP" />

@@ -5,4 +5,5 @@ from . import views
 app_name = 'registration'
 urlpatterns = [
     path('', views.index, name='index'),
+    path('signup.html', views.signup, name='signup'),
 ]

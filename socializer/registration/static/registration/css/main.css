@@ -93,6 +93,12 @@ ul {
     text-align: center;
 }
 
+.green-check {
+    height: auto;
+    margin: 20px auto;
+    width: 150px;
+}
+
 .main-section {
     background: #faf6ee;
     border: 2px solid black;
@@ -114,7 +120,13 @@ ul {
 
 .sign-in, .trouble {
     font-weight: 400;
+    font-size: 1.2rem;
     margin-top: 10px;
+    text-align: center;
+}
+
+.signed-in {
+    font-size: 1.2rem;
     text-align: center;
 }
 

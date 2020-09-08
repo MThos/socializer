@@ -1,0 +1,37 @@
+{% extends "registration/base.html" %}
+{% load static %}
+
+{% block header %}
+<header>
+    <h1 class="title m-b-md">{{title}}</h1>
+    <h4 class="sub-title">{{sub_title}}</h4>
+</header>
+{% endblock %}
+
+{% block content %}
+<section class="main-content">
+    <p class="signed-in">{{signed_up}}</p>
+</section>
+<br>
+<section class="other-options">
+    <div class="sign-in">
+        {% if full_name|length > 0 %}
+            You may now <a href="#">Sign In</a>
+            <br><br>
+            <img src="{% static 'registration/images/green-check.png' %}" class="green-check" alt="icon"/>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+<footer class="footer">
+    Copyright &copy; {{year}}
+    <span class="dark-line">|</span>
+    <a href="#">Terms of Service</a>
+    <span class="dark-line">|</span>
+    <a href="#">Privacy Policy</a>
+    <span class="dark-line">|</span>
+    <a href="#">Contact</a>
+</footer>
+{% endblock %}
