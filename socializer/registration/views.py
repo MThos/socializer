@@ -30,14 +30,27 @@ def signup(request):
             full_name = form.cleaned_data['full_name'],
             user_name = form.cleaned_data['user_name'],
             password = form.cleaned_data['password']
-            user = User(email=email, full_name=full_name, user_name=user_name, password=password, signup=datetime.datetime.now(), logins=0, last_login=datetime.datetime.now())
-            user.save()
-            signed_up = "Congratulations! You are now signed up, " + full_name[0] + "."
-        else:
-            print(form.errors)
-            return redirect("/registration/")
 
-    return render(request, "registration/signup.html", {
-        "signed_up": signed_up,
-        "full_name": full_name
-    })
+            if User.objects.filter(email=email).exists():
+                email_unique = False
+            else:
+                email_unique = True
+
+            if User.objects.filter(user_name=user_name).exists():
+                user_name_unique = False
+            else:
+                user_name_unique = True
+
+            if email_unique and user_name_unique:
+                user = User(email=email, full_name=full_name, user_name=user_name, password=password, signup=datetime.datetime.now(), logins=0, last_login=datetime.datetime.now())
+                user.save()
+                signed_up = "You are now signed up, " + full_name[0] + "."
+
+                return render(request, "registration/signup.html", {
+                    "signed_up": signed_up,
+                    "full_name": full_name
+                })
+        else:
+            return render(request, "registration/index.html", context={
+                'form': form
+            })
