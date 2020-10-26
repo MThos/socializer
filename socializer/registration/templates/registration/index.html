@@ -9,7 +9,7 @@
 
 {% block content %}
 <section class="main-content">
-    <form class="registration" action="{% url 'registration:signup' %}" method="post">
+    <form class="registration" action="{% url 'registration:index' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
             <input type="email" class="form-control" name="email" id="email" placeholder="email" value="{{ form.email.value }}" />

@@ -61,13 +61,18 @@ ul {
     padding: 0 10px;
 }
 
+.errorlist {
+    padding-left: 0;
+}
+
 .errorlist > li {
+    display: inline-block;
     color: red;
     font-size: 0.9rem;
     font-weight: 400;
     list-style-type: none;
     margin-top: 2px;
-    text-align: right;
+    text-align: center;
 }
 
 .footer {
@@ -96,6 +101,7 @@ ul {
     color: black;
     font-weight: 800;
 }
+
 .form-group {
     margin: 15px auto;
     width: 70%;
@@ -113,10 +119,11 @@ ul {
     border: 2px solid black;
     color: #0a0a0a;
     margin: auto;
+    padding: 15px 5px 0 5px;
     position: absolute;
-    height: 560px;
-    padding: 15px;
-    width: 550px;
+    height: fit-content;
+    width: fit-content;
+    min-width: 550px;
     top: 0;
     left: 0;
     bottom: 0;
@@ -127,6 +134,9 @@ ul {
     margin-bottom: 20px;
 }
 
+.red-border {
+    border-color: red !important;
+}
 .sign-in, .trouble {
     font-weight: 400;
     font-size: 1.2rem;

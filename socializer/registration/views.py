@@ -9,19 +9,6 @@ from .models import User
 
 
 def index(request):
-    year = datetime.datetime.now().year
-    title = resolve(request.path).app_name.capitalize()
-    get_current_language = translation.get_language()
-    return render(request, "registration/index.html", {
-        "year": year,
-        "title": "Sign up",
-        "tab_title": "Sign up - Socializer",
-        "sub_title": "SOCIALIZER",
-        "get_current_language": get_current_language
-    })
-
-
-def signup(request):
     if request.method == "POST":
         form = SignupForm(request.POST)
 
@@ -37,7 +24,7 @@ def signup(request):
                 email_unique = True
 
             if User.objects.filter(user_name=user_name).exists():
-                user_name_unique = False
+                raise ValidationError("user name already exists")
             else:
                 user_name_unique = True
 
@@ -51,6 +38,25 @@ def signup(request):
                     "full_name": full_name
                 })
         else:
-            return render(request, "registration/index.html", context={
-                'form': form
+            year = datetime.datetime.now().year
+            # title = resolve(request.path).app_name.capitalize()
+            get_current_language = translation.get_language()
+            return render(request, "registration/index.html", {
+                "year": year,
+                "title": "Sign up",
+                "tab_title": "Sign up - Socializer",
+                "sub_title": "SOCIALIZER",
+                "get_current_language": get_current_language,
+                "form": form
             })
+    else:
+        year = datetime.datetime.now().year
+        # title = resolve(request.path).app_name.capitalize()
+        get_current_language = translation.get_language()
+        return render(request, "registration/index.html", {
+            "year": year,
+            "title": "Sign up",
+            "tab_title": "Sign up - Socializer",
+            "sub_title": "SOCIALIZER",
+            "get_current_language": get_current_language
+        })
